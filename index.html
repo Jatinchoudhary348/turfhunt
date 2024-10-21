@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Turf Hunting System</h1>
+
+        <!-- Turf Selection -->
+        <label for="turfSelect">Select your ground:</label>
+        <select id="turfSelect" onchange="checkAvailability()" required>
+            <option value="MADHUBAN TURF">MADHUBAN TURF</option>
+            <option value="VASANT NAGARI TURF">VASANT NAGARI TURF</option>
+            <option value="ST.ALLOYSIUS TURF">ST.ALLOYSIUS TURF</option>
+        </select>
+
+        <!-- Date Selection -->
+        <label for="date">Select Date of booking:</label>
+        <input type="date" id="date" name="date" required>
+
+        <!-- Time Slot Availability -->
+        <h3>Available Slots</h3>
+        <div class="slots-container" id="availableSlots">
+           
+        </div>
+
+        <!-- Add this inside the container, above the book button -->
+       <label for="email">Enter your email:</label>
+       <input type="email" id="email" placeholder="your-email@example.com" required>
+
+        <button id="bookButton" onclick="bookSlot()" disabled>Book Slot</button>
+
+        <div id="confirmationMessage" class="confirmation"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

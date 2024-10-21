@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/huntimg.webp');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    backdrop-filter: blur(2px);
+    
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    max-width: 450px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+h3 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff; 
+}
+
+.slots-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.slot {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 45%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slot.selected {
+    background-color: #007bff;
+}
+
+.slot:hover {
+    background-color: #218838;
+}
+
+.no-slots {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.confirmation {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+}
